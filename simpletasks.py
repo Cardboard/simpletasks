@@ -30,6 +30,9 @@ def addTask():
     return task
 
 contents = openFile()
+for line in contents:
+    if line == '':
+        contents.remove(line)
 currenttask = 0
 
 def run(contents,currenttask):
